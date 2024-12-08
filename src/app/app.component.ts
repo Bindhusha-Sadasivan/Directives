@@ -28,4 +28,12 @@ export class AppComponent {
       }
     });
   }
+
+  getClass(numbers:number):string{
+    return numbers % 2 === 0 ? 'even' : 'odd';
+  }
+
+  getColor(numbers:number){
+    return numbers % 2 === 0 ? 'yellow' : 'pink';
+  }
 }

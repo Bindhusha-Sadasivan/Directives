@@ -12,13 +12,21 @@
     <div class="col-4">
       <div *ngIf="showNumbers">
         <ul class="list-group" *ngFor="let odd of oddNumbers">
-          <li class="list-group-item">{{odd}}</li>
+          <li class="list-group-item"
+              [ngClass]="{odd: getClass(odd)}"
+              [ngStyle]="{backgroundColor:getColor(odd)}">
+              {{odd}}
+            </li>
         </ul>
       </div>
 
       <div *ngIf="!showNumbers">
         <ul class="list-group" *ngFor="let even of evenNumbers">
-          <li class="list-group-item">{{even}}</li>
+          <li class="list-group-item"
+              [ngClass]="{even: getClass(even)}"
+              [ngStyle]="{backgroundColor:getColor(even)}">
+              {{even}}
+            </li>
         </ul>
       </div>
     </div>
