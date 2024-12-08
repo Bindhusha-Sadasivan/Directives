@@ -20,6 +20,8 @@ export class AppComponent {
   evenNumbers:any = [];
   showNumbers:boolean = false;
 
+  value=15;
+
   onToggle(){
     this.showNumbers = !this.showNumbers;
     this.numbers.forEach((element:any) => {

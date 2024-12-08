@@ -17,6 +17,18 @@
 <div class="container">
   <div class="row">
     <div class="col-4">
+      <div [ngSwitch]="value">
+        <p *ngSwitchCase="5">The Value is 5</p>
+        <p *ngSwitchCase="10">The Value is 10</p>
+        <p *ngSwitchCase="15">The Value is 15</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-4">
       <button class="btn btn-primary mt-5 mb-5"
               (click)="onToggle()">Toggle between odd and even numbers</button>
     </div>
