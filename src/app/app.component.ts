@@ -3,11 +3,12 @@ import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { BasicHighlightDirective } from './directives/basic-highlight.directive';
 import { BetterHighlightDirective } from './directives/better-highlight.directive';
+import { UnlessDirective } from './directives/unless/unless.directive';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, CommonModule, BasicHighlightDirective, BetterHighlightDirective],
+  imports: [RouterOutlet, CommonModule, BasicHighlightDirective, BetterHighlightDirective, UnlessDirective],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })

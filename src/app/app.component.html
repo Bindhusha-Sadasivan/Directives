@@ -26,7 +26,7 @@
 <div class="container">
   <div class="row">
     <div class="col-4">
-      <div *ngIf="showNumbers">
+      <!-- <div *ngIf="showNumbers">
         <ul class="list-group" *ngFor="let odd of oddNumbers">
           <li class="list-group-item"
               [ngClass]="{odd: getClass(odd)}"
@@ -42,6 +42,16 @@
               [ngClass]="{even: getClass(even)}"
               [ngStyle]="{backgroundColor:getColor(even)}">
               {{even}}
+            </li>
+        </ul>
+      </div> -->
+
+      <div *appUnless="showNumbers">
+        <ul class="list-group" *ngFor="let odd of oddNumbers">
+          <li class="list-group-item"
+              [ngClass]="{odd: getClass(odd)}"
+              [ngStyle]="{backgroundColor:getColor(odd)}">
+              {{odd}}
             </li>
         </ul>
       </div>
